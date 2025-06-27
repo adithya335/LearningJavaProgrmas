@@ -26,5 +26,16 @@ public class PatternPrinter {
             }
             System.out.println("");
         }
+
+
+        main1();
+    }
+
+    //alternate cheat trick
+    public static void main1() {
+        int n=5;
+        for(int i=0;i<n;i++){
+            System.out.println(" ".repeat(n-i)+"*".repeat(2*i+1));
+        }
     }
 }
