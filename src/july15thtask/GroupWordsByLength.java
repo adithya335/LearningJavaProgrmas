@@ -10,8 +10,8 @@ public class GroupWordsByLength {
         String[] input = {"Java", "is", "fun", "cool", "Hi"};
         HashMap<Integer, List<String>> map = new HashMap<>();
         for (String s : input) {
-            map.put(s.length(), map.getOrDefault(s.length(), new ArrayList<>()));
-            //can also use map.putIfAbsent(length, new ArrayList<>());
+//      can also use       map.put(s.length(), map.getOrDefault(s.length(), new ArrayList<>()));
+            map.putIfAbsent(s.length(), new ArrayList<>());
             map.get(s.length()).add(s);
         }
         System.out.println(map);
